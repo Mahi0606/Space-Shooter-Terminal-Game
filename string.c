@@ -16,13 +16,13 @@ void str_copy(char *dst, const char *src)
     *dst = '\0';
 }
 
-int str_compare(const char *a, const char *b)
+int str_compare(const char *a, const char *b)   
 {
     while (*a && *b && *a == *b) { a++; b++; }
     return (unsigned char)*a - (unsigned char)*b;
 }
 
-void str_concat(char *dst, const char *src)
+void str_concat(char *dst, const char *src)// display score+number;
 {
     while (*dst) dst++;
     while (*src) *dst++ = *src++;

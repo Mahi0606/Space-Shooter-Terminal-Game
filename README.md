@@ -44,7 +44,7 @@ Arrow keys are supported (mapped like WASD).
 
 - Destroy enemies for **score**. Difficulty ramps with **level** (faster spawns, tougher pacing).  
 - **Levels** advance as your score crosses thresholds (every 200 points by default).  
-- **Bosses** appear on a fixed level interval.  
+- **Bosses** appear on a fixed level interval of 5.  
 - **Game over** if your ship reaches **0 HP** or too many enemies **escape** off the left edge (see in-game controls screen for the exact escape limit).
 
 ### Power-ups (drops when you destroy enemies)
@@ -52,9 +52,9 @@ Arrow keys are supported (mapped like WASD).
 | Pickup | Effect |
 |--------|--------|
 | `+` | Restore **20 HP** |
-| `F` | **Rapid fire** for a short time |
-| `O` | **Shield** — absorbs several hits |
-| `D` | **Double shot** for a short time |
+| `F` | **Rapid fire** for 10s time |
+| `O` | **Shield** — absorbs 5 hits |
+| `D` | **Double shot** for 10s time |
 
 ### Tips
 

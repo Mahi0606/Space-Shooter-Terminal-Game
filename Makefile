@@ -3,7 +3,7 @@ CC      := gcc
 CFLAGS  := -Wall -Wextra -std=c11 -O2
 LDFLAGS :=
 TARGET  := space_shooter
-SRCS    := main.c game.c screen.c keyboard.c memory.c string.c math.c
+SRCS    := main.c game.c screen.c hud.c boost.c sound.c keyboard.c memory.c string.c math.c
 OBJS    := $(SRCS:.c=.o)
 
 .PHONY: all run clean

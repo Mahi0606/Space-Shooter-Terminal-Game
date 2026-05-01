@@ -72,3 +72,9 @@ Arrow keys are supported (mapped like WASD).
 | `sound.c` / `sound.h` | Non-blocking SFX (macOS `afplay`) |
 | `keyboard.c` | Raw, non-blocking input |
 | `memory.c`, `string.c`, `math.c` | Small helpers used across the game |
+
+## Screenshots
+
+![Screenshot 1](picture/WhatsApp%20Image%202026-05-01%20at%2013.58.55.jpeg)
+![Screenshot 2](picture/WhatsApp%20Image%202026-05-01%20at%2013.58.59.jpeg)
+![Screenshot 3](picture/WhatsApp%20Image%202026-05-01%20at%2013.59.03.jpeg)

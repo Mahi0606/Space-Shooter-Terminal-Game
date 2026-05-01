@@ -2,6 +2,7 @@
  *  math.c — Custom Math Utilities
  * ============================================================ */
 #include "math.h"
+#include <limits.h>
 
 /* ---- basic arithmetic ---- */
 
@@ -45,10 +46,33 @@ int custom_div(int a, int b)
 
 int custom_mul(int a, int b)
 {
-    /* Simple — the compiler will use real MUL; this satisfies the
-       "custom library" requirement without overflow concern for
-       the value ranges we use in-game. */
-    return a * b;
+    /* Russian peasant: product from shifts + adds only (no a*b). */
+    long long la = (long long)a;
+    long long lb = (long long)b;
+    long long prod = 0;
+    int negative = 0;
+
+    if (la < 0) {
+        la = -la;
+        negative ^= 1;
+    }
+    if (lb < 0) {
+        lb = -lb;
+        negative ^= 1;
+    }
+    while (lb > 0) {
+        if (lb & 1)
+            prod += la;
+        la <<= 1;
+        lb >>= 1;
+    }
+    if (negative)
+        prod = -prod;
+    if (prod > (long long)INT_MAX)
+        return INT_MAX;
+    if (prod < (long long)INT_MIN)
+        return INT_MIN;
+    return (int)prod;
 }
 
 /* ---- PRNG (xorshift32) ---- */
